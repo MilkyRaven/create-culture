@@ -1,50 +1,160 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      /* Importing Google Font: Poppins */
+      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+
+      :root {
+        --jasmine: #ffd275ff;
+        --earth-yellow: #e8ae68ff;
+        --chamoisee: #a57f60ff;
+        --buff: #e3a587ff;
+        --jasper: #db5a42ff;
+        --gradient-background: linear-gradient(
+          135deg,
+          #ffd275ff,
+          #e8ae68ff,
+          #a57f60ff,
+          #e3a587ff,
+          #db5a42ff
+        );
+      }
+
+      body {
+        font-family: "Nanum Gothic Coding", monospace;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-attachment: fixed;
+        color: var(--chamoisee);
+      }
+
+      main {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 10rem;
+        text-align: center;
+        color: var(--jasper);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: var(--chamoisee);
+        text-align: justify;
+        margin: 1.5rem 0;
+        font-weight: 400;
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--jasper);
+      }
+
+      .highlight {
+        color: var(--jasper);
+        font-weight: bold;
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--earth-yellow);
+      }
+
+      /* Button Style for Impact */
+      .button {
+        display: inline-block;
+        background-color: var(--jasper);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        text-decoration: none;
+        margin-top: 1.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: var(--buff);
+        color: var(--chamoisee);
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Crea Cultura</h1>
+      <p>
+        Cremos no poder da arte como ferramenta para a transformación. A nosa
+        misión é fomentar a reflexión crítica sobre a <strong>cultura</strong>,
+        a <strong>identidade</strong> e a <strong
+          >conexión co mundo natural</strong
+        >. A través de diversas formas de arte, buscamos
+        <strong>empoderar</strong> aos individuos e ás comunidades para que <strong
+        >
+          cuestionen as narrativas predominantes
+        </strong> e se expresen auténticamente.
+      </p>
+      <img src="/vibes.png" alt="Description of the image" class="image" />
+      <p>
+        <strong>We have to create culture.</strong> Don't watch TV, don't read magazines,
+        don't even listen to NPR. <span class="highlight"
+          >Create your own roadshow.</span
+        > The nexus of space and time where you are now is the most immediate sector
+        of your universe, and if you're worrying about Michael Jackson or Bill Clinton
+        or somebody else, then you are disempowered, you're giving it all away to
+        icons, icons which are maintained by an electronic media so that you want
+        to dress like X or have lips like Y.
+      </p>
+
+      <p>
+        "This is shit-brained, this kind of thinking. That is all cultural
+        diversion, and <strong>what is real is you </strong> and your friends and
+        your associations, your highs, your orgasms, your hopes, your plans, your
+        fears."
+      </p>
+
+      <p>
+        And we are told 'no', we're unimportant, we're peripheral. 'Get a
+        degree, get a job, get a this, get a that.' And then you're a player,
+        you don't want to even play in that game. You want to <span
+          class="highlight">reclaim your mind</span
+        > and get it out of the hands of the cultural engineers who want to turn
+        you into a half-baked moron consuming all this trash that's being manufactured
+        out of the bones of a dying world.
+      </p>
+      <p>-- Terence McKenna</p>
+
+      <a href="#" class="button">Join the Movement</a>
+    </main>
+    <Footer />
+  </body>
 </html>
